@@ -2,6 +2,7 @@ package br.org.adsabrasil.pirajussara.gerenciamento.controller;
 
 import br.org.adsabrasil.pirajussara.gerenciamento.service.AbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,6 @@ import java.util.List;
 
 public abstract class AbstractController<T> {
 
-    @Autowired
     AbstractService service;
 
     public AbstractController(AbstractService service) {
@@ -20,6 +20,8 @@ public abstract class AbstractController<T> {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<T> buscarTodos(){
+        System.err.println("GET --> " + service.getClass().toString());
+
         return service.listarAll();
     }
 

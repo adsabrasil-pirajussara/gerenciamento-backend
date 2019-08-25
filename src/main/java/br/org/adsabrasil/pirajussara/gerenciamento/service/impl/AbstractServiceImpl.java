@@ -3,6 +3,7 @@ package br.org.adsabrasil.pirajussara.gerenciamento.service.impl;
 import br.org.adsabrasil.pirajussara.gerenciamento.service.AbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
