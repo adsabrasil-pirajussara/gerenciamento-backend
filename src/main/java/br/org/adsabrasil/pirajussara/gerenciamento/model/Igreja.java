@@ -13,12 +13,15 @@ public class Igreja {
 
     private String endereco;
 
+    private Boolean independente;
+
     public Igreja() {
     }
 
-    public Igreja(String nome, String endereco) {
+    public Igreja(String nome, String endereco, Boolean independente) {
         this.nome = nome;
         this.endereco = endereco;
+        this.independente = independente;
     }
 
     public String getId() {
@@ -43,6 +46,14 @@ public class Igreja {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public Boolean getIndependente() {
+        return independente;
+    }
+
+    public void setIndependente(Boolean independente) {
+        this.independente = independente;
     }
 
     public String toString(){
